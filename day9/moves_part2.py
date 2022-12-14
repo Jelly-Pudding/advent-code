@@ -199,5 +199,5 @@ with open("input.txt", "r") as f:
                 #    print(g)
                 #print("\n\n")
 
-print(set_t)
+#print(set_t)
 print(len(set_t))
