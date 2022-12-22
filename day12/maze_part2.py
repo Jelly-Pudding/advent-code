@@ -80,5 +80,15 @@ def a_star():
             child_open_list_node_index = next((index for (index, d) in enumerate(open_list) if d["the_node"] == child), None)
             open_list[child_open_list_node_index] = {"the_node": child, "parent": parent, "g_value": child_dist_from_start, "f_value": child_f}
 
-path = a_star()
-print(len(path) - 1)
+a_lst = []
+
+for i in range(len(lst)):
+    for j in range(len(lst[i])):
+        if lst[i][j] == "a":
+            start = (i, j)
+            path = a_star()
+            if path != None:
+                a_lst.append(len(path) - 1)
+
+print(a_lst)
+print(min(a_lst))
